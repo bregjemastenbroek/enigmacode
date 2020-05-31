@@ -1,0 +1,63 @@
+# maak hier de hele enigma machine in python :D
+alfabet = "abcdefghijklmnopqrstuvwxyz"
+
+#rotoren
+rotorA = "abcdefghijklmnopqrstuvwxyz"
+rotorB = "abcdefghijklmnopqrstuvwxyz"
+rotorC = "abcdefghijklmnopqrstuvwxyz"
+
+#Functie die rotor een aantal keer laat draaien
+
+#Alfabet omkeren
+
+#Nog een keer door de rotoren maar dan vanaf de andere kant
+
+
+
+#Rotor 1 draait een tikje nadat er een letter doorheen gaat
+
+#Rotor 2 draait een tikje nadat rotor 1 een volledig draai heeft gemaakt
+
+#Rotor 3 draait een tikje nadat rotor 2 een volledige draai heeft gemaakt
+
+
+#Gebruiker moet beginwaarden rotoren intypen
+def Rotorinstellen():
+  print("Bepaal de standen van de rotoren")
+  for x in range(3):
+    while True:
+      print("Stand rotor {}:". format(x+1))
+      try:
+        rotoren.append([alfabet,int(input())])
+        break
+      except:
+        print("Je kan alleen getallen invoeren!")
+
+#start van het progamma
+
+#Rotoren worden gedraaid naar hun beginstand
+
+#printen?
+
+#def shift(tekst, amount):
+  #eersteDeel =  tekst[amount:26]
+  #tweedeDeel = tekst[0:amount]
+  #return eersteDeel + tweedeDeel
+#print(shift(alfabet,9))
+
+# rotor draait + hij kiest een letter
+def encrypt (letter):
+  global rotorA
+  idx = alfabet.index(letter)
+  newLetter = rotorA[idx]
+  eersteDeel = rotorA [1:26]
+  tweedeDeel = rotorA [0:1]
+  rotorA = eersteDeel + tweedeDeel
+
+  return newLetter
+
+woord = ""
+for letter in "julia" :
+  woord = woord + encrypt(letter)
+
+print (woord)
