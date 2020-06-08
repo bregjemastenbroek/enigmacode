@@ -1,0 +1,82 @@
+# maak hier de hele enigma machine in python :D
+alfabet = "abcdefghijklmnopqrstuvwxyz"
+
+#rotoren
+rotorA = "abcdefghijklmnopqrstuvwxyz"
+rotorB = "abcdefghijklmnopqrstuvwxyz"
+rotorC = "abcdefghijklmnopqrstuvwxyz"
+
+class Enigma:
+
+#Gebruiker moet beginwaarden rotoren intypen
+def Rotoren_instellen():
+  print("Bepaal de standen van de rotoren")
+  x = 0:
+    while x < 4:
+      print("Stand rotor {}:".format(x+1))
+      try:
+        rotoren.append([alfabet,int(input())])
+        break
+      except:
+        print("Je kan alleen getallen invoeren!")
+
+#Functie die rotor laat draaien
+def NieuweLetter (LetterBoodschap, StandRotorA, StandRotorB, StandRotorC)
+  for LetterBoodschap
+      if StandRotorA == 25
+        return StandRotorB + 1
+      if StandRotorB == 25
+        return StandRotorC + 1 
+  return StandRotorA + 1
+
+#Alfabet omkeren
+
+
+#Nog een keer door de rotoren maar dan vanaf de andere kant
+
+
+
+#Rotor 1 draait een tikje nadat er een letter doorheen gaat
+
+#Rotor 2 draait een tikje nadat rotor 1 een volledig draai heeft gemaakt
+
+#Rotor 3 draait een tikje nadat rotor 2 een volledige draai heeft gemaakt
+
+#begin van het progamma
+
+#Tekst input die moet worden gecodeerd
+print("Welke tekst wil je encrypthen?")
+inputtekst = input()
+#Hoofdletters in de tekst naar kleine letters omzetten
+inputtekst = inputtekst.lower()
+#list maken van inputtekst
+inputtekstlijst = [str ]
+
+#Rotoren in hun beginstand zetten
+
+#letter door de rotoren
+
+#printen encrypte tekst
+
+#def shift(tekst, amount):
+  #eersteDeel =  tekst[amount:26]
+  #tweedeDeel = tekst[0:amount]
+  #return eersteDeel + tweedeDeel
+#print(shift(alfabet,9))
+
+# rotor draait + hij kiest een letter
+#def encrypt (letter):
+  global rotorA
+  idx = alfabet.index(letter)
+  newLetter = rotorA[idx]
+  eersteDeel = rotorA [1:26]
+  tweedeDeel = rotorA [0:1]
+  rotorA = eersteDeel + tweedeDeel
+
+  return newLetter
+
+#woord = ""
+#for letter in "julia" :
+  #woord = woord + encrypt(letter)
+
+#print (woord)
