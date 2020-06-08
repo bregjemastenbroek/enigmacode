@@ -35,13 +35,6 @@ def NieuweLetter (LetterBoodschap, StandRotorA, StandRotorB, StandRotorC)
 #Nog een keer door de rotoren maar dan vanaf de andere kant
 
 
-
-#Rotor 1 draait een tikje nadat er een letter doorheen gaat
-
-#Rotor 2 draait een tikje nadat rotor 1 een volledig draai heeft gemaakt
-
-#Rotor 3 draait een tikje nadat rotor 2 een volledige draai heeft gemaakt
-
 #begin van het progamma
 
 #Tekst input die moet worden gecodeerd
@@ -51,10 +44,6 @@ inputtekst = input()
 inputtekst = inputtekst.lower()
 #list maken van inputtekst
 inputtekstlijst = [str ]
-
-#Rotoren in hun beginstand zetten
-
-#letter door de rotoren
 
 #printen encrypte tekst
 
